@@ -3,18 +3,16 @@
 void display(int arr[], int n)
 {
     for (int i = 0; i < n; i++)
-    {
         printf("%d ", arr[i]);
-    }
+    
     printf("\n");
 }
 
 void InsertAtFirst(int arr[], int n, int x)
 {
     for (int i = n; i > 0; i--)
-    {
         arr[i] = arr[i - 1];
-    }
+    
     arr[0] = x;
     display(arr, n + 1);
 }
@@ -22,9 +20,8 @@ void InsertAtFirst(int arr[], int n, int x)
 void InsertAtMiddle(int arr[], int pos, int n, int num)
 {
     for (int i = n - 1; i >= pos; i--)
-    {
         arr[i + 1] = arr[i];
-    }
+    
     arr[pos] = num;
     display(arr, n + 1);
 }
@@ -45,9 +42,8 @@ int main()
 
     printf("Enter the Array Elements: ");
     for (int i = 0; i < n; i++)
-    {
         scanf("%d", &arr[i]);
-    }
+    
 
     do
     {
@@ -69,13 +65,9 @@ int main()
             printf("Enter the position to be inserted: ");
             scanf("%d", &position);
             if (position >= 0 && position <= n)
-            {
                 InsertAtMiddle(arr, position, n, num);
-            }
             else
-            {
                 printf("Invalid position\n");
-            }
             break;
 
         case 3:
