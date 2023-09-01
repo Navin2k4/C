@@ -64,11 +64,7 @@ void InsertAtMiddle(struct Node **head, int pos, int x)
             newNode->next = current->next;
             current->next = newNode;
         }
-        else
-        {
-            printf("Invalid position\n");
-            free(newNode); // Free the allocated memory if not used
-        }
+
     }
 }
 int main()
